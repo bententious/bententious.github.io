@@ -725,20 +725,20 @@ var DealsService = /** @class */ (function () {
         this.statsChanged = new rxjs__WEBPACK_IMPORTED_MODULE_3__["Subject"]();
         this.editIndex = new rxjs__WEBPACK_IMPORTED_MODULE_3__["Subject"]();
         this.userIsAuthenticated = false;
-        // stats = {
-        //   quota: 2000000,
-        //   cloudBonus: 5500,
-        //   totalEarnings: 0,
-        //   quotaAttainment: 0,
-        //   totalSales: 0
-        // };
         this.stats = {
-            quota: 0,
-            cloudBonus: 0,
+            quota: 2000000,
+            cloudBonus: 5500,
             totalEarnings: 0,
             quotaAttainment: 0,
             totalSales: 0
         };
+        // stats = {
+        //   quota: 0,
+        //   cloudBonus: 0,
+        //   totalEarnings: 0,
+        //   quotaAttainment: 0,
+        //   totalSales: 0
+        // };
         // preseeding - remove array items for production
         // commissionTiers: Tier[];
         //   commissionTiers: Tier[] = [
