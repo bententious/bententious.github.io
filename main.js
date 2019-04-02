@@ -715,10 +715,6 @@ __webpack_require__.r(__webpack_exports__);
 // commission that starts with tier base greater than 0 200-300 yields negative commission
 // weird situation with logging in if no tier has been saved it doesnt show a tier option
 var DealsService = /** @class */ (function () {
-    // commissionTiers: Tier[] = [
-    //   {min: 0, max: 2000000, rate: 7.5},
-    //   {min: 2000000, max: 99999999, rate: 11.25}
-    // ];
     function DealsService(http, authService) {
         var _this = this;
         this.http = http;
@@ -745,8 +741,12 @@ var DealsService = /** @class */ (function () {
         };
         // preseeding - remove array items for production
         // commissionTiers: Tier[];
+        //   commissionTiers: Tier[] = [
+        //   {min: 0, max: 9999999, rate: 10}
+        // ];
         this.commissionTiers = [
-            { min: 0, max: 9999999, rate: 10 }
+            { min: 0, max: 2000000, rate: 7.5 },
+            { min: 2000000, max: 99999999, rate: 11.25 }
         ];
         // set initial auth value
         this.userIsAuthenticated = this.authService.getIsAuth();
